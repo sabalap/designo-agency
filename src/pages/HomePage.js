@@ -11,89 +11,97 @@ import passionateImage from "../assets/home/desktop/illustration-passionate.svg"
 import resourcefulImage from "../assets/home/desktop/illustration-resourceful.svg";
 import friendlyImage from "../assets/home/desktop/illustration-friendly.svg";
 import { Link } from "react-router-dom";
+import { useUseContext } from "../context/context";
 const HomePage = () => {
+    const { isSidebarOpen } = useUseContext();
     return (
         <HomePageWrapper>
             <div className="container">
-                <section className="red-info">
-                    <div className="text">
-                        <h1>
-                            Award-winning custom <br />
+                {isSidebarOpen ? (
+                    null
+                ) : (
+                    <React.Fragment>
+                        <section className="red-info">
+                            <div className="text">
+                                <h1>
+                                    Award-winning custom <br />
                             designs and digital <br />
                             branding solutions
                         </h1>
-                        <p>
-                            With over 10 years in the industry, we are experienced in creating <br />
+                                <p>
+                                    With over 10 years in the industry, we are experienced in creating <br />
                         fully responsive websites, app design, and engaging brand <br />
                         experiences. Find out more about our services.
                         </p>
-                        <Link to="/appdesign" className="learn-more-btn btn">learn more</Link>
-                    </div>
-                    <div className="img">
-                        <img src={phoneImage} alt="" />
-                    </div>
-                </section>
-                <section className="projects-categories">
-                    <Link to="/webdesign" className="design-left">
-                        <h3>web design</h3>
-                        <p>view projects</p>
-                    </Link>
-                    <div className="design-right">
-                        <Link to="/appdesign" className="app-design">
-                            <h3>app design</h3>
-                            <p>view projects</p>
-                        </Link>
-                        <Link to="/graphicdesign" className="graphic-design">
-                            <h3>graphic design</h3>
-                            <p>view projects</p>
-                        </Link>
-                    </div>
-                </section>
-                <section className="features">
-                    <div className="passionate">
-                        <img src={passionateImage} alt="" />
-                        <h4>PASSIONATE</h4>
-                        <p>
-                            Each project starts with an in-depth brand research to ensure
-                            we only create products that serve a purpose.
-                            We merge art, design, and technology into exciting new solutions.
+                                <Link to="/appdesign" className="learn-more-btn btn">learn more</Link>
+                            </div>
+                            <div className="img">
+                                <img src={phoneImage} alt="" />
+                            </div>
+                        </section>
+                        <section className="projects-categories">
+                            <Link to="/webdesign" className="design-left">
+                                <h3>web design</h3>
+                                <p>view projects</p>
+                            </Link>
+                            <div className="design-right">
+                                <Link to="/appdesign" className="app-design">
+                                    <h3>app design</h3>
+                                    <p>view projects</p>
+                                </Link>
+                                <Link to="/graphicdesign" className="graphic-design">
+                                    <h3>graphic design</h3>
+                                    <p>view projects</p>
+                                </Link>
+                            </div>
+                        </section>
+                        <section className="features">
+                            <div className="passionate">
+                                <img src={passionateImage} alt="" />
+                                <h4>PASSIONATE</h4>
+                                <p>
+                                    Each project starts with an in-depth brand research to ensure
+                                    we only create products that serve a purpose.
+                                    We merge art, design, and technology into exciting new solutions.
                         </p>
-                    </div>
-                    <div className="resourceful">
-                        <img src={resourcefulImage} alt="" />
-                        <h4>RESOURCEFUL</h4>
-                        <p>
-                            Everything that we do has a strategic purpose.
-                            We use an agile approach in all of our projects and value customer collaboration.
-                            It guarantees superior results that fulfill our clients’ needs.
+                            </div>
+                            <div className="resourceful">
+                                <img src={resourcefulImage} alt="" />
+                                <h4>RESOURCEFUL</h4>
+                                <p>
+                                    Everything that we do has a strategic purpose.
+                                    We use an agile approach in all of our projects and value customer collaboration.
+                                    It guarantees superior results that fulfill our clients’ needs.
                          </p>
-                    </div>
-                    <div className="friendly">
-                        <img src={friendlyImage} alt="" />
-                        <h4>FRIENDLY</h4>
-                        <p>
-                            We are a group of enthusiastic folks who know how to put people first.
-                            Our success depends on our customers,
-                            and we strive to give them the best experience a company can provide.
+                            </div>
+                            <div className="friendly">
+                                <img src={friendlyImage} alt="" />
+                                <h4>FRIENDLY</h4>
+                                <p>
+                                    We are a group of enthusiastic folks who know how to put people first.
+                                    Our success depends on our customers,
+                                    and we strive to give them the best experience a company can provide.
                          </p>
-                    </div>
-                </section>
-                <section className="talk-about">
-                    <div className="info-text">
-                        <h1>Let’s talk about your <br />project</h1>
-                        <p>
-                            Ready to take it to the next level?
+                            </div>
+                        </section>
+                        <section className="talk-about">
+                            <div className="info-text">
+                                <h1>Let’s talk about your <br />project</h1>
+                                <p>
+                                    Ready to take it to the next level?
                             Contact us today and find out how <br />
                              our expertise can help your business grow.
                         </p>
-                    </div>
-                    <Link to="/contact" className="btn btn-touch">get in touch</Link>
-                    <span className="circle circle-one"></span>
-                    <span className="circle circle-two"></span>
-                    <span className="circle circle-three"></span>
-                    <span className="circle circle-four"></span>
-                    <span className="circle circle-five"></span>
-                </section>
+                            </div>
+                            <Link to="/contact" className="btn btn-touch">get in touch</Link>
+                            <span className="circle circle-one"></span>
+                            <span className="circle circle-two"></span>
+                            <span className="circle circle-three"></span>
+                            <span className="circle circle-four"></span>
+                            <span className="circle circle-five"></span>
+                        </section>
+                    </React.Fragment>
+                )}
             </div>
         </HomePageWrapper>
     )
