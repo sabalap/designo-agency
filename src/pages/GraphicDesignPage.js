@@ -1,25 +1,23 @@
 import React from "react";
-import styled from "styled-components";
-import airFilter from "../assets/app-design/desktop/image-airfilter.jpg";
-import eyeCam from "../assets/app-design/desktop/image-eyecam.jpg";
-import faceIt from "../assets/app-design/desktop/image-faceit.jpg";
-import todo from "../assets/app-design/desktop/image-todo.jpg";
-import loopStudios from "../assets/app-design/desktop/image-loopstudios.jpg";
-import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
+import timBrown from "../assets/graphic-design/desktop/image-change.jpg";
+import boxedWater from "../assets/graphic-design/desktop/image-boxed-water.jpg";
+import science from "../assets/graphic-design/desktop/image-science.jpg";
+import Banner from "../components/Banner";
+import styled from "styled-components";
 import bigLeaf from "../assets/shared/desktop/bg-pattern-leaf.svg";
-import appDesign from "../assets/home/desktop/image-web-design-small.jpg";
+import webDesign from "../assets/home/desktop/image-web-design-small.jpg";
 import graphicDesign from "../assets/home/desktop/image-graphic-design.jpg";
 import arrowIcon from "../assets/shared/desktop/icon-right-arrow.svg";
-const AppDesign = () => {
+const GraphicDesign = () => {
     return (
         <div className="container">
             <AppWrapper>
                 <div className="red-title">
-                    <h1>App Design</h1>
+                    <h1>Graphic Design</h1>
                     <p>
-                        Our mobile designs bring intuitive digital solutions to <br />
-                    your customers right at their fingertips.
+                        We deliver eye-catching branding materials that are <br />
+                        tailored to meet your business objectives.
                     </p>
                     <span className="circle circle-1"></span>
                     <span className="circle circle-2"></span>
@@ -29,38 +27,24 @@ const AppDesign = () => {
                 </div>
                 <div className="projects">
                     <div className="project">
-                        <img src={airFilter} alt="" />
+                        <img src={timBrown} alt="" />
                         <div className="footer">
-                            <h3>AIRFILTER</h3>
-                            <p>Solving the problem of poor indoor air quality by filtering the air</p>
+                            <h3>TIM BROWN</h3>
+                            <p>A book cover designed for Tim Brown’s new release, ‘Change’</p>
                         </div>
                     </div>
                     <div className="project">
-                        <img src={eyeCam} alt="" />
+                        <img src={boxedWater} alt="" />
                         <div className="footer">
-                            <h3>EYECAM</h3>
-                            <p>Product that lets you edit your favorite photos and videos at any time</p>
+                            <h3>BOXED WATER</h3>
+                            <p>A simple packaging concept made for Boxed Water</p>
                         </div>
                     </div>
                     <div className="project">
-                        <img src={faceIt} alt="" />
+                        <img src={science} alt="" />
                         <div className="footer">
-                            <h3>TODO</h3>
-                            <p>A todo app that features cloud sync with light and dark mode</p>
-                        </div>
-                    </div>
-                    <div className="project">
-                        <img src={todo} alt="" />
-                        <div className="footer">
-                            <h3>FACEIT</h3>
-                            <p>Get to meet your favorite internet superstar with the faceit app</p>
-                        </div>
-                    </div>
-                    <div className="project">
-                        <img src={loopStudios} alt="" />
-                        <div className="footer">
-                            <h3>LOOPSTUDIOS</h3>
-                            <p>A VR experience app made for Loopstudios</p>
+                            <h3>SCIENCE!</h3>
+                            <p>A poster made in collaboration with the Federal Art Project</p>
                         </div>
                     </div>
                 </div>
@@ -69,8 +53,8 @@ const AppDesign = () => {
                         <h3>web design</h3>
                         <p>view projects</p>
                     </Link>
-                    <Link to="/graphicdesign" className="graphic-design">
-                        <h3>graphic design</h3>
+                    <Link to="/appdesign" className="app-design">
+                        <h3>app design</h3>
                         <p>view projects</p>
                     </Link>
                 </div>
@@ -225,10 +209,41 @@ position: relative;
             right: 0px;
             bottom: 6px;
         }
-    .web-design{
-            background-image:url(${appDesign});
+    .app-design{
+            background-image:url(${graphicDesign});
             background-repeat: no-repeat;
             height: 50%;
+            background-position: center;
+            height:308px;
+            border-radius: 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            color:white;
+        }
+        .app-design::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0px;
+            right: unset;
+            bottom: unset;
+            left: unset;
+            transition: 0.2s ease-in-out;
+            border-radius: 15px;
+        }
+        .app-design:hover::before{
+        background: rgba(231, 129, 107, 0.7);
+    }
+    .web-design{
+            background-image:url(${webDesign});
+            height: 50%;
+            background-repeat: no-repeat;
             background-position: center;
             height:308px;
             border-radius: 15px;
@@ -254,37 +269,6 @@ position: relative;
             border-radius: 15px;
         }
         .web-design:hover::before{
-        background: rgba(231, 129, 107, 0.7);
-    }
-    .graphic-design{
-            background-image:url(${graphicDesign});
-            height: 50%;
-            background-repeat: no-repeat;
-            background-position: center;
-            height:308px;
-            border-radius: 15px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            position: relative;
-            color:white;
-        }
-        .graphic-design::before{
-            content: '';
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 0px;
-            right: unset;
-            bottom: unset;
-            left: unset;
-            transition: 0.2s ease-in-out;
-            border-radius: 15px;
-        }
-        .graphic-design:hover::before{
         background: rgba(231, 129, 107, 0.7);
      }
 }
@@ -315,4 +299,4 @@ position: relative;
     }
 }
 `
-export default AppDesign;
+export default GraphicDesign;

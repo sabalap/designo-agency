@@ -1,25 +1,26 @@
 import React from "react";
-import styled from "styled-components";
-import airFilter from "../assets/app-design/desktop/image-airfilter.jpg";
-import eyeCam from "../assets/app-design/desktop/image-eyecam.jpg";
-import faceIt from "../assets/app-design/desktop/image-faceit.jpg";
-import todo from "../assets/app-design/desktop/image-todo.jpg";
-import loopStudios from "../assets/app-design/desktop/image-loopstudios.jpg";
-import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
+import express from "../assets/web-design/desktop/image-express.jpg";
+import transfer from "../assets/web-design/desktop/image-transfer.jpg";
+import photon from "../assets/web-design/desktop/image-photon.jpg";
+import builder from "../assets/web-design/desktop/image-builder.jpg";
+import blogr from "../assets/web-design/desktop/image-blogr.jpg";
+import camp from "../assets/web-design/desktop/image-camp.jpg";
+import Banner from "../components/Banner";
+import styled from "styled-components";
 import bigLeaf from "../assets/shared/desktop/bg-pattern-leaf.svg";
-import appDesign from "../assets/home/desktop/image-web-design-small.jpg";
+import webDesign from "../assets/home/desktop/image-app-design.jpg";
 import graphicDesign from "../assets/home/desktop/image-graphic-design.jpg";
 import arrowIcon from "../assets/shared/desktop/icon-right-arrow.svg";
-const AppDesign = () => {
+const WebDesign = () => {
     return (
         <div className="container">
             <AppWrapper>
                 <div className="red-title">
-                    <h1>App Design</h1>
+                    <h1>Web Design</h1>
                     <p>
-                        Our mobile designs bring intuitive digital solutions to <br />
-                    your customers right at their fingertips.
+                        We build websites that serve as powerful marketing tools <br />
+                        and bring memorable brand experiences.
                     </p>
                     <span className="circle circle-1"></span>
                     <span className="circle circle-2"></span>
@@ -29,44 +30,51 @@ const AppDesign = () => {
                 </div>
                 <div className="projects">
                     <div className="project">
-                        <img src={airFilter} alt="" />
+                        <img src={express} alt="" />
                         <div className="footer">
-                            <h3>AIRFILTER</h3>
-                            <p>Solving the problem of poor indoor air quality by filtering the air</p>
+                            <h3>EXPRESS</h3>
+                            <p>A multi-carrier shipping website for ecommerce businesses</p>
                         </div>
                     </div>
                     <div className="project">
-                        <img src={eyeCam} alt="" />
+                        <img src={transfer} alt="" />
                         <div className="footer">
-                            <h3>EYECAM</h3>
-                            <p>Product that lets you edit your favorite photos and videos at any time</p>
+                            <h3>TRANSFER</h3>
+                            <p>Site for low-cost money transfers and sending money within seconds</p>
                         </div>
                     </div>
                     <div className="project">
-                        <img src={faceIt} alt="" />
+                        <img src={photon} alt="" />
                         <div className="footer">
-                            <h3>TODO</h3>
-                            <p>A todo app that features cloud sync with light and dark mode</p>
+                            <h3>PHOTON</h3>
+                            <p>A state-of-the-art music player with high-resolution audio and DSP effects</p>
                         </div>
                     </div>
                     <div className="project">
-                        <img src={todo} alt="" />
+                        <img src={builder} alt="" />
                         <div className="footer">
-                            <h3>FACEIT</h3>
-                            <p>Get to meet your favorite internet superstar with the faceit app</p>
+                            <h3>BUILDER</h3>
+                            <p>Connects users with local contractors based on their location</p>
                         </div>
                     </div>
                     <div className="project">
-                        <img src={loopStudios} alt="" />
+                        <img src={blogr} alt="" />
                         <div className="footer">
-                            <h3>LOOPSTUDIOS</h3>
-                            <p>A VR experience app made for Loopstudios</p>
+                            <h3>BLOGR</h3>
+                            <p>Blogr is a platform for creating an online blog or publication</p>
+                        </div>
+                    </div>
+                    <div className="project">
+                        <img src={camp} alt="" />
+                        <div className="footer">
+                            <h3>CAMP</h3>
+                            <p>Get expert training in coding, data, design, and digital marketing</p>
                         </div>
                     </div>
                 </div>
                 <div className="designs">
-                    <Link to="/webdesign" className="web-design">
-                        <h3>web design</h3>
+                    <Link to="/appdesign" className="app-design">
+                        <h3>app design</h3>
                         <p>view projects</p>
                     </Link>
                     <Link to="/graphicdesign" className="graphic-design">
@@ -225,8 +233,8 @@ position: relative;
             right: 0px;
             bottom: 6px;
         }
-    .web-design{
-            background-image:url(${appDesign});
+    .app-design{
+            background-image:url(${webDesign});
             background-repeat: no-repeat;
             height: 50%;
             background-position: center;
@@ -240,7 +248,7 @@ position: relative;
             position: relative;
             color:white;
         }
-        .web-design::before{
+        .app-design::before{
             content: '';
             width: 100%;
             height: 100%;
@@ -253,7 +261,7 @@ position: relative;
             transition: 0.2s ease-in-out;
             border-radius: 15px;
         }
-        .web-design:hover::before{
+        .app-design:hover::before{
         background: rgba(231, 129, 107, 0.7);
     }
     .graphic-design{
@@ -315,4 +323,4 @@ position: relative;
     }
 }
 `
-export default AppDesign;
+export default WebDesign;

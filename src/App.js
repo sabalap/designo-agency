@@ -10,6 +10,8 @@ import Locations from "./pages/Locations";
 import Contact from "./pages/ContactPage";
 import AppDesign from "./pages/AppDesignPage";
 import ScrollToTop from "./utils/ScrollToTop";
+import WebDesign from "./pages/WebDesignPage";
+import GraphicDesign from "./pages/GraphicDesignPage";
 const App = () => {
   return (
     <Router>
@@ -31,6 +33,12 @@ const App = () => {
         </Route>
         <Route path="/appdesign" exact>
           <AppDesign />
+        </Route>
+        <Route path="/webdesign" exact>
+          <WebDesign />
+        </Route>
+        <Route path="/graphicdesign" exact>
+          <GraphicDesign />
         </Route>
       </Switch>
       <Footer />

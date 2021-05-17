@@ -23,7 +23,7 @@ const Sidebar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/location" onClick={closeSidebar}>
+                        <Link to="/locations" onClick={closeSidebar}>
                             locations
                         </Link>
                     </li>
