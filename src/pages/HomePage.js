@@ -12,6 +12,7 @@ import resourcefulImage from "../assets/home/desktop/illustration-resourceful.sv
 import friendlyImage from "../assets/home/desktop/illustration-friendly.svg";
 import { Link } from "react-router-dom";
 import { useUseContext } from "../context/context";
+import Banner from "../components/Banner";
 const HomePage = () => {
     const { isSidebarOpen } = useUseContext();
     return (
@@ -84,22 +85,7 @@ const HomePage = () => {
                          </p>
                             </div>
                         </section>
-                        <section className="talk-about">
-                            <div className="info-text">
-                                <h1>Let’s talk about your <br />project</h1>
-                                <p>
-                                    Ready to take it to the next level?
-                            Contact us today and find out how <br />
-                             our expertise can help your business grow.
-                        </p>
-                            </div>
-                            <Link to="/contact" className="btn btn-touch">get in touch</Link>
-                            <span className="circle circle-one"></span>
-                            <span className="circle circle-two"></span>
-                            <span className="circle circle-three"></span>
-                            <span className="circle circle-four"></span>
-                            <span className="circle circle-five"></span>
-                        </section>
+                        <Banner />
                     </React.Fragment>
                 )}
             </div>
@@ -388,42 +374,6 @@ margin-top:20px;
             left: 74px;
             opacity: 0.2;
             border-radius: 50%;
-        }
-    }
-    .talk-about{
-        bottom: -100px;
-        background-color: #E7816B;
-        padding: 80px 100px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color:white;
-        border-radius: 15px;
-        position: relative;
-        overflow:hidden;
-        h1{
-            font-size:40px;
-            line-height:42px;
-            margin-bottom:20px;
-        }
-        .btn-touch{
-            border:none;
-            background:white;
-            font-weight:700;
-            color: #1D1C1E;
-            letter-spacing: 1px;
-            font-size:15px;
-            cursor: pointer;
-            transition:0.2s ease-in-out;
-            width: 170px;
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            &:hover{
-                color: #FFFFFF;
-                background-color: #FFAD9B;
-            }
         }
     }
     .circle{

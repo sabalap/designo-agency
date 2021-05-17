@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import whiteLogo from "../assets/shared/desktop/logo-light.png";
 import facebookIcon from "../assets/shared/desktop/icon-facebook.svg";
 import youtubeIcon from "../assets/shared/desktop/icon-youtube.svg";
@@ -29,12 +29,12 @@ const Footer = () => {
                         <li>
                             <Link to="/locations">
                                 locations
-                        </Link>
+                            </Link>
                         </li>
                         <li>
                             <Link to="/contact">
                                 contact
-                        </Link>
+                            </Link>
                         </li>
                     </ul>
                 </div>

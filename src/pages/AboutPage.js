@@ -9,6 +9,7 @@ import canadaImg from "../assets/shared/desktop/illustration-canada.svg";
 import australiaImg from "../assets/shared/desktop/illustration-australia.svg";
 import ukImg from "../assets/shared/desktop/illustration-united-kingdom.svg";
 import dealImg from "../assets/about/desktop/image-real-deal.jpg";
+import Banner from "../components/Banner";
 const About = () => {
     return (
         <div className="container">
@@ -106,6 +107,7 @@ const About = () => {
                     <div className="img-box">
                     </div>
                 </div>
+                <Banner />
             </AboutWrapper>
         </div>
     )
@@ -129,7 +131,7 @@ position: relative;
     height: 594px;
     background-image:url(${bigCircle});
     transform: rotate(180deg);
-    top: 63%;
+    top: 55%;
     left: 60%;
     z-index: -1;
 }
@@ -389,6 +391,109 @@ margin-top: 20px;
         background-size: cover;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
+    }
+    @media (max-width:1024px){
+        ::after{
+            display:none;
+        }
+        ::before{
+            display:none;
+        }
+        .about-info .text{
+            padding: 40px;
+        }
+        .talent-box{
+            grid-template-columns: 1fr;
+            grid-template-rows: 555px 450px;
+            .img-box{
+                border-radius: 15px;
+            }
+            .talent-text{
+                border-radius: 15px;
+                margin-top: 20px;
+            }
+        }
+    }
+    @media (max-width:768px){
+        .about-info{
+            grid-template-columns: 1fr;
+            .text::after{
+                display:none;
+            }
+            .text{
+                text-align: center;
+                border-radius: 15px;
+                margin-bottom: 20px;
+                p{
+                    margin: 0 auto;
+                }
+            }
+            .img img{
+                width:100%;
+                border-radius: 15px;
+            }
+        }
+        .talent-box .talent-text{
+            text-align: center;
+        }
+        .locations{
+            flex-direction: column;
+            align-items: center;
+            h4{
+                margin-bottom:20px !important;
+                margin-top:20px !important;
+            }
+            > div{
+                margin-bottom:50px;
+            }
+        }
+        .deal-box{
+            grid-template-columns: 1fr;
+            margin-top: 50px;
+            .deal-text{
+                padding: 40px;
+                text-align: center;
+                border-radius: 15px;
+            }
+            .img-box{
+                margin-top: 20px;
+                border-radius: 15px;
+            }
+        }
+        .talk-about{
+            flex-direction: column;
+            text-align: center;
+            .info-text{
+                margin-bottom: 30px;
+            }
+        }
+    }
+    @media (max-width:650px){
+        .talent-text .circle{
+            display:none;
+        }
+        .talent-box {
+            grid-template-columns: 1fr;
+            grid-template-rows: 555px auto;
+            .talent-text{
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+    @media (max-width:450px){
+        .talk-about{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .talent-box{
+            margin-top: 80px;
+        }
+        .locations > div{
+            width:320px;
+        }
     }
 `
 export default About;
